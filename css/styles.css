@@ -15,12 +15,35 @@ body {
   font-family: "Roboto", sans-serif;
   background: var(--primary-color-bg);
 }
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+}
 /* components */
 .list {
   list-style: none;
 }
 .link {
   text-decoration: none;
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .section-title {
   font-weight: 700;
@@ -30,8 +53,21 @@ body {
   color: var(--secondary-text-color);
 }
 /* header */
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.contact-list {
+  display: flex;
+  margin-left: auto;
+}
+.nav-list {
+  display: flex;
+}
+
 .logo,
 .logo-black {
+  margin: 24px 93px 25px 0px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -41,8 +77,9 @@ body {
 .logo-black {
   color: var(--secondary-text-color);
 }
-.nav-link,
-.contact-link {
+
+.nav-link {
+  margin-right: 50px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -54,6 +91,10 @@ body {
   color: var(--primary-color-accent);
 }
 .contact-link {
+  margin-right: 50px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
 .contact-link:hover,
@@ -143,7 +184,12 @@ body {
 }
 /* portfolio.html */
 /* button */
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+}
 .portfolio-btn {
+  margin-right: 52px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
