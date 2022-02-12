@@ -39,7 +39,7 @@ img {
   text-decoration: none;
 }
 .container {
-  width: 1200px;
+  width: 1230px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -51,6 +51,14 @@ img {
   line-height: 1.16;
   text-align: center;
   color: var(--secondary-text-color);
+}
+.portfolio-list {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 }
 /* header */
 .header-container {
@@ -103,22 +111,33 @@ img {
 }
 /* hero */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-bottom: 95px;
   background: var(--color-bg);
+
+  text-align: center;
 }
 .hero-text {
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text);
 }
 .btn {
+  padding: 10px 32px;
+  min-width: 200px;
+  border: transparent;
+  border-radius: 4px;
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
+  letter-spacing: 0.06em;
   color: var(--color-text);
   background: var(--primary-color-accent);
 }
@@ -128,6 +147,9 @@ img {
   background: var(--secondary-color-btn);
 }
 /* features */
+.features-list {
+  display: flex;
+}
 .features-item-title {
   font-weight: 700;
   font-size: 14px;
@@ -140,7 +162,13 @@ img {
   color: var(--primary-text-color);
 }
 /* make-section */
+.make-list {
+  display: flex;
+}
 /* team */
+.team-list {
+  display: flex;
+}
 .team-section {
   background: var(--secondary-color-bg);
 }
@@ -185,11 +213,8 @@ img {
 /* portfolio.html */
 /* button */
 .portfolio-list {
-  display: flex;
-  justify-content: center;
 }
 .portfolio-btn {
-  margin-right: 52px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -206,7 +231,7 @@ img {
 .portfolio-card-name {
   font-weight: 700;
   font-size: 18px;
-  line-height: 2;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
 }
@@ -214,4 +239,13 @@ img {
   font-size: 16px;
   line-height: 1.87;
   color: var(--primary-text-color);
+}
+.portfolio-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc((100%-60px) / 3);
+}
+.portfolio-card-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
 }
