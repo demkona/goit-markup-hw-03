@@ -52,14 +52,7 @@ img {
   text-align: center;
   color: var(--secondary-text-color);
 }
-.portfolio-list {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-}
+
 /* header */
 .header-container {
   display: flex;
@@ -212,9 +205,14 @@ img {
 }
 /* portfolio.html */
 /* button */
+
 .portfolio-list {
+  margin-bottom: 65px;
+  display: flex;
+  justify-content: center;
 }
 .portfolio-btn {
+  margin-right: 52px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -243,7 +241,7 @@ img {
 .portfolio-card-list {
   display: flex;
   flex-wrap: wrap;
-  width: calc((100%-60px) / 3);
+  /* width: calc((100%-60px) / 3); */
 }
 .portfolio-card-item {
   margin-right: 30px;
