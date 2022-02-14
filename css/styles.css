@@ -30,6 +30,8 @@ ol {
 }
 img {
   display: block;
+  max-width: 100%;
+  min-height: auto;
 }
 /* components */
 .list {
@@ -44,7 +46,6 @@ img {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: solid red;
 }
 .section-title {
   font-weight: 700;
@@ -83,9 +84,9 @@ img {
 }
 
 .nav-link {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  margin-right: 50px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -96,11 +97,11 @@ img {
 .nav-link.current {
   color: var(--primary-color-accent);
 }
-.nav-link:not(:last-child) {
-  margin-right: 30px;
+.nav-item:not(:last-child) {
+  margin-right: 50px;
 }
 .contact-link {
-  margin-right: 50px;
+  display: block;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -110,13 +111,14 @@ img {
 .contact-link:focus {
   color: var(--primary-color-accent);
 }
+.contact-item:not(:last-child) {
+  margin-right: 50px;
+}
 /* hero */
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  margin-bottom: 95px;
   background: var(--color-bg);
-
   text-align: center;
 }
 .hero-text {
@@ -133,7 +135,6 @@ img {
   min-width: 200px;
   border: transparent;
   border-radius: 4px;
-  cursor: pointer;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -145,13 +146,23 @@ img {
 .btn:hover,
 .btn:focus,
 .btn:visited {
+  cursor: pointer;
   background: var(--secondary-color-btn);
 }
 /* features */
 .features-list {
   display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.features-list {
+  flex-basis: calc((100%-90px) / 4);
+}
+.features-item:not(:last-child) {
+  margin-right: 30px;
 }
 .features-item-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -166,21 +177,47 @@ img {
 .make-list {
   display: flex;
 }
+.make {
+  padding-bottom: 94px;
+}
+.make-list {
+  flex-basis: calc((100% - 60px) / 3);
+}
+.make-item:not(:last-child) {
+  margin-right: 30px;
+}
+.section-title {
+  margin-bottom: 50px;
+}
 /* team */
 .team-list {
   display: flex;
+  padding-bottom: 94px;
+  flex-basis: calc((100% - 90px) / 4);
+}
+.team-item {
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--primary-color-bg);
+}
+.team-item:not(:last-child) {
+  margin-right: 30px;
 }
 .team-section {
-  background: var(--secondary-color-bg);
+  padding-top: 94px;
+  background-color: var(--secondary-color-bg);
 }
 .team-item-name {
+  margin-top: 30px;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+  letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
 .team-item-prof {
+  padding-bottom: 30px;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -189,6 +226,11 @@ img {
 /* footer */
 .footer-section {
   background: var(--color-bg);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.address-list {
+  margin-top: 20px;
 }
 .address-link {
   font-style: normal;
@@ -208,6 +250,9 @@ img {
 .address-contact-link:focus {
   color: var(--primary-color-accent);
 }
+.address-contact-item {
+  margin-top: 9px;
+}
 .logo-white {
   color: var(--color-text);
 }
@@ -217,12 +262,22 @@ img {
 .portfolio-list {
   display: flex;
   justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 56px;
 }
+.portfolio-btn-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .portfolio-btn {
-  margin-right: 52px;
+  padding: 6px 22px;
+  border: transparent;
+  border-radius: 4px;
+  line-height: 1.62;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
+  letter-spacing: 0.03em;
   color: var(--secondary-text-color);
   background: var(--secondary-color-bg);
 }
@@ -233,23 +288,37 @@ img {
   cursor: pointer;
 }
 /* card */
+.portfolio-card-list {
+  padding-bottom: 94px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio-card-item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+.portfolio-card-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.portfolio-card-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+.portfolio-text {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
 .portfolio-card-name {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.62;
+  line-height: 2;
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
 }
-.portfolio-card-type {
+.portfolio-link {
   font-size: 16px;
   line-height: 1.87;
+  letter-spacing: 0.03em;
   color: var(--primary-text-color);
-}
-.portfolio-card-list {
-  display: flex;
-  flex-wrap: wrap;
-  width: calc((100%-60px) / 3);
-}
-.portfolio-card-item:nth-child(3n) {
-  margin-right: 0;
 }
