@@ -156,7 +156,7 @@ img {
   padding-bottom: 94px;
 }
 .features-list {
-  flex-basis: calc((100%-90px) / 4);
+  flex-basis: calc((100% - 90px) / 4);
 }
 .features-item:not(:last-child) {
   margin-right: 30px;
