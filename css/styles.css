@@ -215,8 +215,6 @@ img {
 /* button */
 
 .portfolio-list {
-  margin-top: 100px;
-  margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
@@ -250,10 +248,8 @@ img {
 .portfolio-card-list {
   display: flex;
   flex-wrap: wrap;
-  /* width: calc((100%-60px) / 3); */
+  width: calc((100%-60px) / 3);
 }
-
-.portfolio-card-item {
-  margin-right: 30px;
-  margin-bottom: 30px;
+.portfolio-card-item:nth-child(3n) {
+  margin-right: 0;
 }
